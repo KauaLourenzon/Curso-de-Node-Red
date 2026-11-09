@@ -71,10 +71,15 @@ async function criarTabelas() {
       id         SERIAL PRIMARY KEY,
       user_id    INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
       lesson_id  TEXT NOT NULL,
+      option_index INTEGER,
       correct    INTEGER NOT NULL,
       created_at TIMESTAMPTZ NOT NULL DEFAULT now()
     );
   `);
+
+  // Mantém compatibilidade com bancos criados antes da persistência da
+  // alternativa escolhida pelo aluno.
+  await query(`ALTER TABLE quiz_results ADD COLUMN IF NOT EXISTS option_index INTEGER;`);
 
   // Substitui o antigo arquivo local data/video-overrides.json: no Vercel o
   // sistema de arquivos é somente leitura (fora de /tmp, que é efêmero), então

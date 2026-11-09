@@ -1,4 +1,4 @@
-# Curso de Node — Plataforma com login e banco de dados
+# Curso de Node-RED — Plataforma com login e banco de dados
 
 Plataforma de curso online (login/cadastro reais, banco de dados e
 progresso por aluno). Stack:
@@ -37,10 +37,10 @@ curso-node/
   public/                   frontend (servido como arquivos estáticos)
 ```
 
-O curso hoje tem **11 módulos e 51 aulas**, do "o que é o Node.js" até um
-projeto final guiado — cobrindo JavaScript básico, assincronismo, Express,
-autenticação/segurança, bancos SQL e NoSQL, testes automatizados,
-WebSockets, Docker/CI-CD e deploy.
+O curso hoje tem **7 módulos e 22 aulas**, da introdução ao Node-RED até um
+projeto final de IoT com MQTT. A trilha cobre criação de fluxos, nodes Inject,
+Debug, Change, Switch, Template e Function, manipulação de dados, integração
+com APIs, automação, contexto, dashboard e comunicação MQTT.
 
 ## Conta de administração
 
